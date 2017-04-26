@@ -1,10 +1,11 @@
 {
   "name": "jud-styler",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "jud styler",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "gulp test && npm run cover",
+    "cover": "node node_modules/isparta/bin/isparta cover node_modules/gulp-mocha/node_modules/.bin/_mocha -- --reporter dot"
   },
   "repository": {
     "type": "git",
@@ -15,6 +16,18 @@
   ],
   "author": "vkiding",
   "license": "GPL-3.0",
+  "dependencies": {
+    "css": "~2.2.1"
+  },
+  "devDependencies": {
+    "chai": "~3.4.1",
+    "gulp": "~3.9.0",
+    "gulp-jscs": "~3.0.2",
+    "gulp-mocha": "~2.2.0",
+    "sinon": "~1.17.2",
+    "sinon-chai": "~2.8.0",
+    "isparta": "~4.0.0"
+  },
   "bugs": {
     "url": "https://github.com/vkiding/jud-styler/issues"
   },
